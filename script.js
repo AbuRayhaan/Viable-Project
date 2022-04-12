@@ -1,58 +1,172 @@
+/*  PROGRAM  */
 const programData = [
-    {
+  {
     id: 1,
     programIcon: 'fa-circle-play',
     programName: 'Lecture',
-    programInfo: 'Listen to the sakers from various countries about the messages of sharig and opening.',
-    },
-    {
+    programInfo: 'Listen to the speakers from various disciplines of life. Sharing opportunities for young talents.',
+  },
+  {
     id: 2,
     programIcon: 'fa-house-laptop',
-    programName: 'Lecture',
-    programInfo: 'Listen to the sakers from various countries about the messages of sharig and opening.',
-    },
+    programName: 'Workshop',
+    programInfo: 'An intensive group discussion from Educators, Subject Matter Experts, Managers, and Leaders.',
+  },
+  {
     id: 3,
     programIcon: 'fa-globe',
-    programName: 'Lecture',
-    programInfo: 'Listen to the sakers from various countries about the messages of sharig and opening.',
-    },
-    {
+    programName: 'Network',
+    programInfo: 'Be part of networking icebreaker questions, speed networking ideas, or assignments to meet people.',
+  },
+  {
     id: 4,
     programIcon: 'fa-laptop',
-    programName: 'Workshop',
-    programInfo: 'Listen to the sakers from various countries about the messages of sharig and opening.',
-    },
+    programName: 'Forum',
+    programInfo: 'Share you thoughts and opinions with captains of industry for each topic',
+  },
+  {
     id: 5,
     programIcon: 'fa-circle-nodes',
-    programName: 'Lecture',
-    programInfo: 'Listen to the sakers from various countries about the messages of sharig and opening.',
-    },
+    programName: 'Exhibition',
+    programInfo: 'Appreciate display of works of art or items of interest at the conference.',
+  }
 ];
 
-const work = document.querySelector('#work');
+const program = document.querySelector('.program-container');
 
-for (let i = 0; i < projectData.length; i += 1) {
-  work.innerHTML += `<ul class="project-works">
-  <li class="project-image-container">
-    <img src="${projectData[i].projectImageURL}" alt="Tonic" class="mobile-image">
-  </li>
-
-  <li class="project-body-block">
-    <h2 class="project-title">${projectData[i].projectName}</h2>
-    <div class="project-info">
-      <span class="project-info-items canopy">${projectData[i].projectInfo}</span>
-      <img src="./images/Counter.svg" alt="counter">
-      <span class="project-info-items">${projectData[i].projectDev}</span>
-      <img src="./images/Counter.svg" alt="counter">
-      <span class="project-info-items">${projectData[i].projectYear}</span>
-    </div>
-    <p class="project-primary-text">${projectData[i].projectDesc}</p>
-    <ul class="tags">
-      <li class="tag">${projectData[i].projectLang1}</li>
-      <li class="tag">${projectData[i].projectLang2}</li>
-      <li class="tag">${projectData[i].projectLang3}</li>
-    </ul>
-    <button class="button popUp-button" data-id="3" type="button">See Project</button>
-  </li>
-</ul>`;
+for (let i = 0; i < programData.length; i += 1) {
+  program.innerHTML += `<div class="program-category">
+  <i class="fa-solid ${programData[i].programIcon}"></i>
+  <h2 class="program-name">${programData[i].programName}</h2>
+  <p class="program-info">${programData[i].programInfo}</p>                
+</div>`;
 }
+
+/*  SPEAKERS  */
+
+const speakerDetails = [
+  {
+    id: 1,
+    speakerImage: 'images/BunmiDavies.PNG',
+    speakerName: 'Bunmi Davies',
+    speakerProfile: 'Producer/Director',
+    speakerBio: 'Bunmi Davies is an entertainment producer and director. He is an alumni of the University of Lagos, Nigeria.',
+  },
+  {
+    id: 2,
+    speakerImage: 'images/PASSPORT.JPG',
+    speakerName: 'Akanji Rahmah',
+    speakerProfile: 'Founder, Olaide Ologe',
+    speakerBio: 'Akanji Rahmah is popularly known as \'Umm Rayhaan\'. She is the founder of fashion outfit \'Olaide-Ologe\'.',
+  },
+  {
+    id: 3,
+    speakerImage: 'images/StephenAkintayo.PNG',
+    speakerName: 'Stephen Akintayo',
+    speakerProfile: 'GMD/CEO GText Global',
+    speakerBio: 'GText is a global company with office in 4 continents of the world. GText heaquarters is in Lagos, Nigeria.',
+  },
+  {
+    id: 4,
+    speakerImage: 'images/PASSPORT.JPG',
+    speakerName: 'Hammed Adisa',
+    speakerProfile: 'Software Developer, Microverse',
+    speakerBio: 'An inspiring software developer from Nigeria. He is an Alumni of the University of Port Harcourt, Nigeria.',
+  },
+  {
+    id: 5,
+    speakerImage: 'images/HalimaDangote.PNG',
+    speakerName: 'Halima Dangote',
+    speakerProfile: 'Group Executive Director Commercial of Dangote Industries Limited.',
+    speakerBio: 'A Business Director at Dangote Group, An African industrial conglomerate present in over 17 countries.',
+  },
+  {
+    id: 6,
+    speakerImage: 'images/EstherIgbekele.PNG',
+    speakerName: 'Esther Igbekele',
+    speakerProfile: 'Song Writer',
+    speakerBio: 'A musician and vocalist, a native of Orile-Iganmu, Lagos State. Her genre of music is the gospel category.',
+  },
+]
+
+const speaker = document.querySelector('.speakers-container');
+
+for (let i = 0; i < speakerDetails.length; i += 1) {
+  speaker.innerHTML += `<div class="speaker-details">
+  <div class="speaker-photo">
+      <img src="${speakerDetails[i].speakerImage}" alt="${speakerDetails[i].speakerName}">
+  </div>
+  
+  <div class="speaker-info">
+      <h2 class="speaker-name">${speakerDetails[i].speakerName}</h2>
+      <h3 class="speaker-profile">${speakerDetails[i].speakerProfile}</h3>
+      <p class="speaker-bio">${speakerDetails[i].speakerBio}</p>
+  </div>        
+</div>`;
+}
+
+/*  DOM ELEMENTS  */
+const body = document.querySelector('body');
+const toggleMenu = document.createElement('div');
+toggleMenu.setAttribute('class','toggleMenu');
+toggleMenu.setAttribute('id','toggleMenu');
+const aAbout = document.createElement('a');
+aAbout.href="#about"
+const toggleAbout = document.createElement('p');
+toggleAbout.setAttribute('class','toggle-items');
+toggleAbout.innerHTML = 'About';
+const aProgram = document.createElement('a');
+aProgram.href="#program"
+const toggleProgram = document.createElement('p');
+toggleProgram.setAttribute('class','toggle-items');
+toggleProgram.innerHTML = 'Program';
+const aJoin = document.createElement('a');
+aJoin.href="#join"
+const toggleJoin = document.createElement('p');
+toggleJoin.setAttribute('class','toggle-items');
+toggleJoin.innerHTML = 'Join';
+const aSponsor = document.createElement('a');
+aSponsor.href="#sponsor"
+const toggleSponsor = document.createElement('p');
+toggleSponsor.setAttribute('class','toggle-items');
+toggleSponsor.innerHTML = 'Sponsor';
+const aNews = document.createElement('a');
+aNews.href="#"
+const toggleNews = document.createElement('p');
+toggleNews.setAttribute('class','toggle-items');
+toggleNews.innerHTML = 'News';
+/*
+const closeBtn = document.createElement('i');
+  closeBtn.className = 'fa-solid fa-xmark';
+  closeBtn.addEventListener('click', () => {
+    const popup = document.querySelector('.toggleMenu');
+    if (popup) {
+      popup.parentElement.removeChild(popup);
+    }
+});
+*/
+toggleMenu.append(aAbout);
+aAbout.append(toggleAbout);
+toggleMenu.append(aProgram);
+aProgram.append(toggleProgram);
+toggleMenu.append(aJoin);
+aJoin.append(toggleJoin);
+toggleMenu.append(aSponsor);
+aSponsor.append(toggleSponsor);
+toggleMenu.append(aNews);
+aNews.append(toggleNews);
+
+/*  TOGGLE MENU */
+
+const hamburger = document.querySelector('.hamburger');
+const toggle = document.querySelector('.toggleMenu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  body.append(toggleMenu);
+});
+
+document.querySelectorAll('.toggle-items').forEach((n) => n.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  body.parentElement.remove(toggleMenu);
+}));
