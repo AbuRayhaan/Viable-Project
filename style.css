@@ -363,6 +363,7 @@ main {
 .past-summits-images {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 35px;
   width: 320px;
 }
