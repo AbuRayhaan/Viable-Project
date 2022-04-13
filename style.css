@@ -126,7 +126,7 @@ main {
   font-size: 36px;
   font-family: sans-serif;
   font-weight: bold;
-  line-height: 34px;
+  line-height: 45px;
   color: #ec5242;
 }
 
@@ -171,11 +171,7 @@ main {
 }
 
 .program-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 15px;
-  background-color: #272a31;
+  display: grid;
 }
 
 .program-category {
@@ -234,7 +230,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 5rem 1.5rem;
-  row-gap: 15px;
+  column-gap: 15px;
   background-color: #fff;
 }
 
@@ -287,6 +283,88 @@ main {
 .speaker-bio {
   font-size: 12px;
   font-style: italic;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5.5rem 1.5rem;
+  gap: 40px;
+  overflow-x: hidden;
+}
+
+.about-summit {
+  font-size: 36px;
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 45px;
+  color: #ec5242;
+  text-align: center;
+}
+
+.about-para {
+  font-size: 12px;
+  background-color: #d3d3d3;
+  border: 5px solid white;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-contact {
+  font-size: 13px;
+  text-align: center;
+}
+
+.about-mail {
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.summit-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5.5rem 1.5rem;
+  gap: 30px;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+.summit-logo-header,
+.past-summit-header {
+  text-align: center;
+}
+
+.summit-logo-para,
+.past-summit-para {
+  font-size: 14px;
+  text-align: center;
+}
+
+.summit-logo-para2 {
+  display: none;
+}
+
+.vg-logo {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.past-summit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5.5rem 1.5rem;
+  gap: 30px;
+  overflow-x: hidden;
+}
+
+.past-summits-images {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 320px;
 }
 
 .partner {
@@ -595,6 +673,18 @@ main {
   .speaker-bio {
     font-size: 12px;
     font-style: italic;
+  }
+
+  .summit-logo-para2 {
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .past-summits-images {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
   }
 
   .partner {

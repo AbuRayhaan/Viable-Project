@@ -131,7 +131,7 @@ const toggleSponsor = document.createElement('p');
 toggleSponsor.setAttribute('class', 'toggle-items');
 toggleSponsor.innerHTML = 'Sponsor';
 const aNews = document.createElement('a');
-aNews.href = '#';
+aNews.href = '#news';
 const toggleNews = document.createElement('p');
 toggleNews.setAttribute('class', 'toggle-items');
 toggleNews.innerHTML = 'News';
@@ -168,5 +168,6 @@ hamburger.addEventListener('click', () => {
 });
 
 toggleItems.forEach((n) => n.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
   toggleMenu.remove(toggleMenu);
 }));
