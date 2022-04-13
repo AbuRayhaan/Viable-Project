@@ -7,7 +7,7 @@
 
 body {
   position: relative;
-  font-family: "cocogoose", sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.5rem;
@@ -34,7 +34,7 @@ a {
 }
 
 a:link {
-  color: #344563;
+  color: #fff;
 }
 
 a:hover {
