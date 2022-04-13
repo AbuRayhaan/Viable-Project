@@ -29,7 +29,7 @@ const programData = [
     programIcon: 'fa-circle-nodes',
     programName: 'Exhibition',
     programInfo: 'Appreciate display of works of art or items of interest at the conference.',
-  }
+  },
 ];
 
 const program = document.querySelector('.program-container');
@@ -54,7 +54,7 @@ const speakerDetails = [
   },
   {
     id: 2,
-    speakerImage: 'images/PASSPORT.JPG',
+    speakerImage: 'images/RahmahOlaide.PNG',
     speakerName: 'Akanji Rahmah',
     speakerProfile: 'Founder, Olaide Ologe',
     speakerBio: 'Akanji Rahmah is popularly known as \'Umm Rayhaan\'. She is the founder of fashion outfit \'Olaide-Ologe\'.',
@@ -87,7 +87,7 @@ const speakerDetails = [
     speakerProfile: 'Song Writer',
     speakerBio: 'A musician and vocalist, a native of Orile-Iganmu, Lagos State. Her genre of music is the gospel category.',
   },
-]
+];
 
 const speaker = document.querySelector('.speakers-container');
 
@@ -108,43 +108,34 @@ for (let i = 0; i < speakerDetails.length; i += 1) {
 /*  DOM ELEMENTS  */
 const body = document.querySelector('body');
 const toggleMenu = document.createElement('div');
-toggleMenu.setAttribute('class','toggleMenu');
-toggleMenu.setAttribute('id','toggleMenu');
+toggleMenu.setAttribute('class', 'toggleMenu');
+toggleMenu.setAttribute('id', 'toggleMenu');
 const aAbout = document.createElement('a');
-aAbout.href="#about"
+aAbout.href = '#about';
 const toggleAbout = document.createElement('p');
-toggleAbout.setAttribute('class','toggle-items');
+toggleAbout.setAttribute('class', 'toggle-items');
 toggleAbout.innerHTML = 'About';
 const aProgram = document.createElement('a');
-aProgram.href="#program"
+aProgram.href = '#program';
 const toggleProgram = document.createElement('p');
-toggleProgram.setAttribute('class','toggle-items');
+toggleProgram.setAttribute('class', 'toggle-items');
 toggleProgram.innerHTML = 'Program';
 const aJoin = document.createElement('a');
-aJoin.href="#join"
+aJoin.href = '#join';
 const toggleJoin = document.createElement('p');
-toggleJoin.setAttribute('class','toggle-items');
+toggleJoin.setAttribute('class', 'toggle-items');
 toggleJoin.innerHTML = 'Join';
 const aSponsor = document.createElement('a');
-aSponsor.href="#sponsor"
+aSponsor.href = '#sponsor';
 const toggleSponsor = document.createElement('p');
-toggleSponsor.setAttribute('class','toggle-items');
+toggleSponsor.setAttribute('class', 'toggle-items');
 toggleSponsor.innerHTML = 'Sponsor';
 const aNews = document.createElement('a');
-aNews.href="#"
+aNews.href = '#';
 const toggleNews = document.createElement('p');
-toggleNews.setAttribute('class','toggle-items');
+toggleNews.setAttribute('class', 'toggle-items');
 toggleNews.innerHTML = 'News';
-/*
-const closeBtn = document.createElement('i');
-  closeBtn.className = 'fa-solid fa-xmark';
-  closeBtn.addEventListener('click', () => {
-    const popup = document.querySelector('.toggleMenu');
-    if (popup) {
-      popup.parentElement.removeChild(popup);
-    }
-});
-*/
+
 toggleMenu.append(aAbout);
 aAbout.append(toggleAbout);
 toggleMenu.append(aProgram);
@@ -159,14 +150,23 @@ aNews.append(toggleNews);
 /*  TOGGLE MENU */
 
 const hamburger = document.querySelector('.hamburger');
-const toggle = document.querySelector('.toggleMenu');
+const toggleItems = [];
+
+toggleItems.push(aAbout);
+toggleItems.push(aProgram);
+toggleItems.push(aJoin);
+toggleItems.push(aSponsor);
+toggleItems.push(aNews);
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
-  body.append(toggleMenu);
+  if (document.querySelector('.toggleMenu')) {
+    toggleMenu.remove(toggleMenu);
+  } else {
+    body.append(toggleMenu);
+  }
 });
 
-document.querySelectorAll('.toggle-items').forEach((n) => n.addEventListener('click', () => {
-  hamburger.classList.remove('active');
-  body.parentElement.remove(toggleMenu);
+toggleItems.forEach((n) => n.addEventListener('click', () => {
+  toggleMenu.remove(toggleMenu);
 }));
