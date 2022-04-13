@@ -492,6 +492,14 @@ main {
     box-shadow: 0 1px 10px black;
   }
 
+  .partner-list img {
+    width: 80%;
+  }
+
+  header .navbar-white img {
+    margin-top: 3px;
+  }
+
   header .header-white-menu {
     display: flex;
     font-size: 16px;
@@ -702,9 +710,5 @@ main {
     flex-direction: row;
     gap: 25px;
     align-items: center;
-  }
-
-  .partner-list img {
-    width: 80%;
   }
 }

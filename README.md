@@ -36,6 +36,8 @@ To get a local copy up and running:
 
 - LinkedIn: [Adisa Hammed](https://www.linkedin.com/in/hammed-adisa-mct-ccsp-ctp-b4378372/)
 
+- Loom: https://www.loom.com/share/627f866e8c9f4661903c8d8c10785f75
+
 ## Design By
 
 👤 **Cindy Shin**
