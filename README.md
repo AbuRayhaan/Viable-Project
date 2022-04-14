@@ -22,7 +22,7 @@ To get a local copy up and running:
 
 1. Clone this repository or download the Zip folder:
 
-**``git clone https://github.com/AbuRayhaan/Mobile-Website``**
+**``git clone https://aburayhaan.github.io/Viable-Project``**
 
 1. Navigate to the location of the folder in your machine:
 
@@ -54,4 +54,4 @@ Give a ⭐ if you like this project and how we manage to build it!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md)
+This project is [MIT](https://github.com/AbuRayhaan/Viable-Project/blob/add-license-1/LICENSE)

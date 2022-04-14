@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('http://fonts.cdnfonts.com/css/cocogoose');
+@import url('http://fonts.cdnfonts.com/css/lato');
 
 * {
   margin: 0;
@@ -7,7 +9,7 @@
 
 body {
   position: relative;
-  font-family: sans-serif;
+  font-family: "cocogoose", "lato";
   font-style: normal;
   font-weight: normal;
   line-height: 1.5rem;
@@ -124,7 +126,7 @@ main {
 
 .headline-summit {
   font-size: 36px;
-  font-family: sans-serif;
+  font-family: cocogoose, lato;
   font-weight: bold;
   line-height: 45px;
   color: #ec5242;
@@ -183,6 +185,7 @@ main {
   padding: 15px;
   margin-top: 30px;
   align-items: center;
+  max-height: 250px;
 }
 
 .fa-brands,
@@ -296,7 +299,7 @@ main {
 
 .about-summit {
   font-size: 36px;
-  font-family: sans-serif;
+  font-family: cocogoose, lato;
   font-weight: bold;
   line-height: 45px;
   color: #ec5242;
@@ -390,13 +393,30 @@ main {
 }
 
 .footer-section {
+  display: flex;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   padding: 1rem 1.5rem;
   background-color: #fff;
 }
 
+.footer-section-about {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #272a31;
+}
+
 .copyright {
+  text-align: center;
+  color: #272a31;
+}
+
+.copyright-about {
+  color: #fff;
   text-align: center;
 }
 
@@ -562,7 +582,7 @@ main {
 
   .headline-summit {
     font-size: 52px;
-    font-family: sans-serif, lato;
+    font-family: cocogoose, lato;
     font-weight: bold;
     line-height: 56px;
     color: #ec5242;
@@ -592,11 +612,9 @@ main {
   }
 
   .program-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 15px;
-    background-color: #272a31;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 15px;
     width: 80%;
   }
 
