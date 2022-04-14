@@ -130,7 +130,7 @@ main {
 }
 
 .headline-summit {
-  font-family: "cocogoose", sans-serif;
+  font-family: "Cocogoose", sans-serif;
   font-size: 36px;
   font-weight: bold;
   line-height: 45px;
@@ -305,6 +305,7 @@ main {
 .about-summit {
   font-size: 36px;
   font-weight: bold;
+  font-family: "Cocogoose", sans-serif;
   line-height: 45px;
   color: #ec5242;
   text-align: center;
@@ -314,6 +315,7 @@ main {
   font-size: 12px;
   background-color: #d3d3d3;
   border: 5px solid white;
+  font-family: "Lato", sans-serif;
   padding: 20px;
   text-align: center;
 }
@@ -405,17 +407,26 @@ main {
   background-color: #d3d3d3;
 }
 
+.footer-section-about {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+}
+
 .copyright {
   text-align: center;
   color: #272a31;
 }
 
 .copyright-about {
-  color: #fff;
+  color: #272a31;
   text-align: center;
 }
 
-.copyright-info {
+.copyright-about-info {
   display: none;
 }
 
@@ -568,7 +579,7 @@ main {
   }
 
   .headline-hello {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     color: #ec5242;
     align-items: center;
@@ -579,7 +590,8 @@ main {
     letter-spacing: 3px;
   }
 
-  .headline-summit {
+  .headline-summit,
+  .about-summit {
     font-size: 52px;
     font-weight: bold;
     line-height: 56px;
@@ -601,6 +613,14 @@ main {
 
   .headline-venue {
     font-size: 18px;
+  }
+
+  .about-para {
+    font-size: 18px;
+    background-color: #d3d3d3;
+    border: 5px solid white;
+    padding: 20px;
+    width: 60%;
   }
 
   .line {
@@ -713,12 +733,7 @@ main {
   }
 
   .partner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5rem 1.5rem;
-    row-gap: 15px;
-    background-color: #272a31;
+    display: none;
   }
 
   .partner-list {
@@ -728,18 +743,18 @@ main {
     align-items: center;
   }
 
-  .footer-section {
+  .footer-section-about {
     display: flex;
     gap: 25px;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #272a31;
   }
 
-  .copyright,
-  .copyright-info {
+  .copyright-about,
+  .copyright-about-info {
     display: flex;
+    color: #fff;
     text-align: center;
-    color: #272a31;
   }
 }
